@@ -47,9 +47,41 @@ console.log(w)
 const qwerty = {
     r:100,
     t:200,
-    myf : function(){
+    myf : ()=>{
         return this.r+this.t;
     }
 }
 
 console.log(qwerty.myf())
+
+const ras = {
+    ab:1,
+    ac:2,
+    cd:function(){
+        console.log(this);
+    }
+};
+
+const you = {
+    a:8,
+    b:9
+}
+
+
+var ds = ras.cd;
+ds.call(you)
+
+ras.cd = ras.cd.bind(ras)
+var l =ras.cd;
+l()
+
+//bind,call,apply
+
+class Putin{
+    mydart=()=>{
+        console.log(this)
+    }
+}
+var buty = new Putin();
+var ert = buty.mydart.bind(buty);
+ert.call(buty)
