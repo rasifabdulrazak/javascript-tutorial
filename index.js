@@ -1,10 +1,14 @@
-console.log(1);
-document.getElementById('button').onclick = myfunction;
-
-const a=[2,3,9,4];
-a.forEach(myfunction);
-function myfunction(arg){
-    console.log(arg);
+function myfunction(p){
+    console.log('hello world',p);
 }
-myfunction(10)
-console.log(2);
+myfunction();
+
+
+const h = [1,2,3,4,5,6]
+
+h.forEach(myfunction)
+
+const fn = function(p){
+    console.log('Hello');
+}
+fn(200)
